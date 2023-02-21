@@ -72,16 +72,58 @@ app_o_pontos.place(x=130, y=20) #mover item dentro da janela
 app_ =Label(frame_baixo, text='', height=23, relief='flat', pady=5, anchor='center', font=('Ivy 5 bold'), bg=co0, fg=co7)  
 app_.place(x=90, y=15) #mover item dentro da janela
 app_ =Label(frame_baixo, text='', height=23, relief='flat', pady=5, anchor='center', font=('Ivy 5 bold'), bg=co0, fg=co7)  
-app_.place(x=160, y=15) #mover item dentro da janela
+app_.place(x=157, y=15) #mover item dentro da janela
 
 #criando linhas horizontais
-app_ =Label(frame_baixo, text=' ', width=190, relief='flat', padx=2, pady=1, anchor='center', font=('Ivy 1 bold'), bg=co0, fg=co7)  
+app_ =Label(frame_baixo, text=' ', width=46, relief='flat', padx=2, pady=1, anchor='center', font=('Ivy 5 bold'), bg=co0, fg=co7)  
 app_.place(x=30, y=63) #mover item dentro da janela
-app_ =Label(frame_baixo, text=' ', width=190, relief='flat', padx=2, pady=1, anchor='center', font=('Ivy 1 bold'), bg=co0, fg=co7)  
-app_.place(x=30, y=123) #mover item dentro da janela
+app_ =Label(frame_baixo, text=' ', width=46, relief='flat', padx=2, pady=1, anchor='center', font=('Ivy 5 bold'), bg=co0, fg=co7)  
+app_.place(x=30, y=127) #mover item dentro da janela
 
 
+##CRIANDO BOTÃO
 
+#linha 0 coluna 1
+b_0 =Button(frame_baixo, text='', width=3, font=('Ivy 20 bold'), overrelief=RIDGE, relief='flat', bg=fundo, fg=co7)  
+b_0.place(x=30, y=15) #mover item dentro da janela
+
+#linha 0 coluna 2
+b_1 =Button(frame_baixo, text='', width=3, font=('Ivy 20 bold'), overrelief=RIDGE, relief='flat', bg=fundo, fg=co7)  
+b_1.place(x=96, y=15) #mover item dentro da janela
+
+#linha 0 coluna 3
+b_2 =Button(frame_baixo, text='', width=3, font=('Ivy 20 bold'), overrelief=RIDGE, relief='flat', bg=fundo, fg=co7)  
+b_2.place(x=162, y=15) #mover item dentro da janela
+
+#linha 1 coluna 1
+b_3 =Button(frame_baixo, text='', width=3, font=('Ivy 20 bold'), overrelief=RIDGE, relief='flat', bg=fundo, fg=co7)  
+b_3.place(x=30, y=75) #mover item dentro da janela
+
+#linha 1 coluna 2
+b_4 =Button(frame_baixo, text='', width=3, font=('Ivy 20 bold'), overrelief=RIDGE, relief='flat', bg=fundo, fg=co7)  
+b_4.place(x=96, y=75) #mover item dentro da janela
+
+#linha 1 coluna 3
+b_5 =Button(frame_baixo, text='', width=3, font=('Ivy 20 bold'), overrelief=RIDGE, relief='flat', bg=fundo, fg=co7)  
+b_5.place(x=162, y=75) #mover item dentro da janela
+
+#linha 2 coluna 1
+b_6 =Button(frame_baixo, text='', width=3, font=('Ivy 20 bold'), overrelief=RIDGE, relief='flat', bg=fundo, fg=co7)  
+b_6.place(x=30, y=135) #mover item dentro da janela
+
+#linha 2 coluna 2
+b_7 =Button(frame_baixo, text='', width=3, font=('Ivy 20 bold'), overrelief=RIDGE, relief='flat', bg=fundo, fg=co7)  
+b_7.place(x=96, y=135) #mover item dentro da janela
+
+#linha  coluna 3
+b_8 =Button(frame_baixo, text='', width=3, font=('Ivy 20 bold'), overrelief=RIDGE, relief='flat', bg=fundo, fg=co7)  
+b_8.place(x=162, y=135) #mover item dentro da janela
+
+
+##BOTAO JOGAR
+
+b_jogar =Button(frame_baixo, text='Jogar', width=10, font=('Ivy 10 bold'), overrelief=RIDGE, relief='raised', bg=fundo, fg=co0)  
+b_jogar.place(x=85, y=210) #mover item dentro da janela
 
 
 
