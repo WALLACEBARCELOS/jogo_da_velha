@@ -29,4 +29,4 @@ Contribuições são sempre bem-vindas! Se você quiser contribuir com o projeto
 5. Envie suas alterações: `git push origin minha-branch`.
 6. Abra uma pull request.
 
-Referência: https://www.usandopy.com/pt/artigo/como-criar-jogo-da-velha-tic-tac-toe-em-python/ 
+Referência: usando python
