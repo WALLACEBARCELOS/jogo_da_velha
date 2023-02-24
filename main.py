@@ -73,22 +73,25 @@ app_o_pontos.place(x=130, y=20) #mover item dentro da janela
 
 jogador_1 = "X"
 jogador_2 = "O" 
+
 pontuacao_1 = 0
 pontuacao_2 = 0
 
-tabela = [['1', '2', '3'], ['4', '5', '5'], ['7', '8', '9']]
+tabela = [['1','2','3'], ['4','5','6'], ['7', '8', '9']]
 
 jogando = 'X'
 joga = ''
 contador = 0
 contador_de_rodada = 0
+
+
 def iniciar_jogo():
+    b_jogar.place(x=800, y=350)
     #Controlar o jogo
     def controlar(i):
         global jogando
         global contador
         global jogar
-        global cor
         
         #comparando o valor recebido
         if i==str(1):
@@ -327,6 +330,8 @@ def iniciar_jogo():
                     joga ='Jogador 2'
                 #Incrementando o contador para a próxima rodada
                 contador+=1
+                
+                
         #Quando o contador for maior ou igual a 5, verifica se houve algum vencedor, de acordo com os seguites padroes dentro da tabela
         
         if contador>=5:
@@ -337,6 +342,8 @@ def iniciar_jogo():
                 vencedor(jogando)
             elif tabela[2][0] == tabela[2][1] == tabela[2][2]!="":
                 vencedor(jogando)
+                
+                
             #Colunas
             if tabela[0][0] == tabela[1][0] == tabela[2][0]!="":
                 vencedor(jogando)
@@ -358,12 +365,10 @@ def iniciar_jogo():
     #Decidir o vencedor
     def vencedor(i):
         global tabela
-        global jogando
         global pontuacao_1
         global pontuacao_2
-        
-        
-        
+        global contador_de_rodada
+        global contador
         
         #bloqueando os botoes
         b_0['state']='disable'
@@ -379,17 +384,20 @@ def iniciar_jogo():
         app_vencedor =Label(frame_baixo, text='', width=17, relief='flat', anchor='center', font=('Ivy 13 bold'), bg=co1, fg=co2)  
         app_vencedor.place(x=40, y=220)
         
+        if i == 'Foi empate':
+            app_vencedor['text'] = 'Empate'
+            
         if i == 'X':
             pontuacao_2+=1
-            app_vencedor['text'] = 'Jogador 2 venceu'   
             app_o_pontos['text'] = pontuacao_2
+            app_vencedor['text'] = 'Jogador 2 venceu' 
             
         if i == 'O':
             pontuacao_1+=1
-            app_vencedor['text'] = 'Jogador 1 venceu'   
             app_x_pontos['text'] = pontuacao_1
-        if i == 'Foi empate':
-            app_vencedor['text'] = 'Empate'
+            app_vencedor['text'] = 'Jogador 1 venceu'   
+            
+        
             
         def start():
             
@@ -415,13 +423,13 @@ def iniciar_jogo():
             b_7['state']='normal'
             b_8['state']='normal'
             
-            #reiniciando a tabela
-            tabela = [['1', '2', '3'], ['4', '5', '5'], ['7', '8', '9']]
+            
             
             app_vencedor.destroy()
             b_jogar.destroy()
+            
         ##CHAMA A FUNÇÃO START
-        b_jogar =Button(frame_baixo, command=start, text='Proxima Rodada', font=('Ivy 10 bold'), overrelief=RIDGE, relief='raised', bg=fundo, fg=co0)  
+        b_jogar = Button(frame_baixo, command=start, text='Proxima Rodada', height= 1, font=('Ivy 10 bold'), overrelief=RIDGE, relief='raised', bg=fundo, fg=co0)  
         b_jogar.place(x=70, y=197) #mover item dentro da janela
         
         def fim_de_jogo():
@@ -431,6 +439,14 @@ def iniciar_jogo():
             
             terminar()
 
+            if contador_de_rodada>=5:
+                fim_de_jogo()
+                
+            else:
+                contador_de_rodada+=1
+                #reiniciando a tabela
+                tabela = [['1','2','3'], ['4','5','6'], ['7', '8', '9']]
+                contador = 0
             
             
    
@@ -443,10 +459,11 @@ def iniciar_jogo():
         global pontuacao_2
         global contador
         
-        tabela = [['1', '2', '3'], ['4', '5', '5'], ['7', '8', '9']]
+        tabela = [['1','2','3'], ['4','5','6'], ['7', '8', '9']]
         contador_de_rodada = 0
         pontuacao_1 = 0 
         pontuacao_2 = 0
+        contador = 0
         
         
         #bloqueando os botoes
@@ -466,15 +483,19 @@ def iniciar_jogo():
         #Jogar novamente
         
         def jogar_novamente():
-            app_o_pontos['text'] = '0'
             app_x_pontos['text'] = '0'
+            app_o_pontos['text'] = '0'
             app_fim.destroy()
             b_jogar.destroy()
+            
+            
             #iniciando o jogo novamente
             iniciar_jogo()
-            #jogar novamente
-            b_jogar =Button(frame_baixo, command=jogar_novamente, text='Jogar', width=10, font=('Ivy 10 bold'), overrelief=RIDGE, relief='raised', bg=fundo, fg=co0)  
-            b_jogar.place(x=85, y=197) #mover item dentro da janela
+            
+            
+        #jogar novamente
+        b_jogar =Button(frame_baixo, command=jogar_novamente, text='Jogar Novamente', height=1, font=('Ivy 10 bold'), overrelief=RIDGE, relief='raised', bg=fundo, fg=co0)  
+        b_jogar.place(x=80, y=197) #mover item dentro da janela
         
         
     
