@@ -81,6 +81,7 @@ tabela = [['1', '2', '3'], ['4', '5', '5'], ['7', '8', '9']]
 jogando = 'X'
 joga = ''
 contador = 0
+contador_de_rodada = 0
 def iniciar_jogo():
     #Controlar o jogo
     def controlar(i):
@@ -104,44 +105,19 @@ def iniciar_jogo():
                 #definindo a cor do  texto do  botao e marcar a posição da tabela com o valor do jogador atual
                 b_0['fg'] = cor
                 b_0['text'] = jogando
-                tabela[[0][0]] = jogando
+                tabela[0][0] = jogando
+            
                 
                 #verificando quem vai estar jogando para trocar para o proximo jogar
                 if jogando == 'X':
-                    jogando = '0'
+                    jogando = 'O'
                     joga ='Jogador 1'
                 else:
                     jogando = 'X'
                     joga ='Jogador 2'
                 #Incrementando o contador para a próxima rodada
                 contador+=1
-                #Quando o contador for maior ou igual a 5, verifica se houve algum vencedor, de acordo com os seguites padroes dentro da tabela
                 
-                if contador>=5:
-                    #linhas 
-                    if tabela[0][0] == tabela[0][1] == tabela[0][2]!="":
-                        vencedor(jogando)
-                    elif tabela[1][0] == tabela[1][1] == tabela[1][2]!="":
-                        vencedor(jogando)
-                    elif tabela[2][0] == tabela[2][1] == tabela[2][2]!="":
-                        vencedor(jogando)
-                    #Colunas
-                    if tabela[0][0] == tabela[1][0] == tabela[2][0]!="":
-                        vencedor(jogando)
-                    elif tabela[0][1] == tabela[1][1] == tabela[2][1]!="":
-                        vencedor(jogando)
-                    elif tabela[0][2] == tabela[1][2] == tabela[2][2]!="":
-                        vencedor(jogando)
-                        
-                    #diagonais
-                    if tabela[0][0] == tabela[1][1] == tabela[2][2]!="":
-                        vencedor(jogando)
-                    elif tabela[0][2] == tabela[1][1] == tabela[2][0]!="":
-                        vencedor(jogando)
-        
-                    #empate
-                    if contador>=9:
-                        vencedor('foi empate')
         
         if i==str(2):
             #verificando se a posição esta vazia ou nao
@@ -155,44 +131,19 @@ def iniciar_jogo():
                 #definindo a cor do  texto do  botao e marcar a posição da tabela com o valor do jogador atual
                 b_1['fg'] = cor
                 b_1['text'] = jogando
-                tabela[[0][0]] = jogando
+                tabela[0][1] = jogando
+            
                 
                 #verificando quem vai estar jogando para trocar para o proximo jogar
                 if jogando == 'X':
-                    jogando = '0'
+                    jogando = 'O'
                     joga ='Jogador 1'
                 else:
                     jogando = 'X'
                     joga ='Jogador 2'
                 #Incrementando o contador para a próxima rodada
                 contador+=1
-                #Quando o contador for maior ou igual a 5, verifica se houve algum vencedor, de acordo com os seguites padroes dentro da tabela
                 
-                if contador>=5:
-                    #linhas 
-                    if tabela[0][0] == tabela[0][1] == tabela[0][2]!="":
-                        vencedor(jogando)
-                    elif tabela[1][0] == tabela[1][1] == tabela[1][2]!="":
-                        vencedor(jogando)
-                    elif tabela[2][0] == tabela[2][1] == tabela[2][2]!="":
-                        vencedor(jogando)
-                    #Colunas
-                    if tabela[0][0] == tabela[1][0] == tabela[2][0]!="":
-                        vencedor(jogando)
-                    elif tabela[0][1] == tabela[1][1] == tabela[2][1]!="":
-                        vencedor(jogando)
-                    elif tabela[0][2] == tabela[1][2] == tabela[2][2]!="":
-                        vencedor(jogando)
-                        
-                    #diagonais
-                    if tabela[0][0] == tabela[1][1] == tabela[2][2]!="":
-                        vencedor(jogando)
-                    elif tabela[0][2] == tabela[1][1] == tabela[2][0]!="":
-                        vencedor(jogando)
-        
-                    #empate
-                    if contador>=9:
-                        vencedor('foi empate')
         
         if i==str(3):
             #verificando se a posição esta vazia ou nao
@@ -206,44 +157,19 @@ def iniciar_jogo():
                 #definindo a cor do  texto do  botao e marcar a posição da tabela com o valor do jogador atual
                 b_2['fg'] = cor
                 b_2['text'] = jogando
-                tabela[[0][0]] = jogando
+                tabela[0][2] = jogando
+            
                 
                 #verificando quem vai estar jogando para trocar para o proximo jogar
                 if jogando == 'X':
-                    jogando = '0'
+                    jogando = 'O'
                     joga ='Jogador 1'
                 else:
                     jogando = 'X'
                     joga ='Jogador 2'
                 #Incrementando o contador para a próxima rodada
                 contador+=1
-                #Quando o contador for maior ou igual a 5, verifica se houve algum vencedor, de acordo com os seguites padroes dentro da tabela
                 
-                if contador>=5:
-                    #linhas 
-                    if tabela[0][0] == tabela[0][1] == tabela[0][2]!="":
-                        vencedor(jogando)
-                    elif tabela[1][0] == tabela[1][1] == tabela[1][2]!="":
-                        vencedor(jogando)
-                    elif tabela[2][0] == tabela[2][1] == tabela[2][2]!="":
-                        vencedor(jogando)
-                    #Colunas
-                    if tabela[0][0] == tabela[1][0] == tabela[2][0]!="":
-                        vencedor(jogando)
-                    elif tabela[0][1] == tabela[1][1] == tabela[2][1]!="":
-                        vencedor(jogando)
-                    elif tabela[0][2] == tabela[1][2] == tabela[2][2]!="":
-                        vencedor(jogando)
-                        
-                    #diagonais
-                    if tabela[0][0] == tabela[1][1] == tabela[2][2]!="":
-                        vencedor(jogando)
-                    elif tabela[0][2] == tabela[1][1] == tabela[2][0]!="":
-                        vencedor(jogando)
-        
-                    #empate
-                    if contador>=9:
-                        vencedor('foi empate')
         
         if i==str(4):
             #verificando se a posição esta vazia ou nao
@@ -257,44 +183,19 @@ def iniciar_jogo():
                 #definindo a cor do  texto do  botao e marcar a posição da tabela com o valor do jogador atual
                 b_3['fg'] = cor
                 b_3['text'] = jogando
-                tabela[[0][0]] = jogando
+                tabela[1][0] = jogando
+            
                 
                 #verificando quem vai estar jogando para trocar para o proximo jogar
                 if jogando == 'X':
-                    jogando = '0'
+                    jogando = 'O'
                     joga ='Jogador 1'
                 else:
                     jogando = 'X'
                     joga ='Jogador 2'
                 #Incrementando o contador para a próxima rodada
                 contador+=1
-                #Quando o contador for maior ou igual a 5, verifica se houve algum vencedor, de acordo com os seguites padroes dentro da tabela
                 
-                if contador>=5:
-                    #linhas 
-                    if tabela[0][0] == tabela[0][1] == tabela[0][2]!="":
-                        vencedor(jogando)
-                    elif tabela[1][0] == tabela[1][1] == tabela[1][2]!="":
-                        vencedor(jogando)
-                    elif tabela[2][0] == tabela[2][1] == tabela[2][2]!="":
-                        vencedor(jogando)
-                    #Colunas
-                    if tabela[0][0] == tabela[1][0] == tabela[2][0]!="":
-                        vencedor(jogando)
-                    elif tabela[0][1] == tabela[1][1] == tabela[2][1]!="":
-                        vencedor(jogando)
-                    elif tabela[0][2] == tabela[1][2] == tabela[2][2]!="":
-                        vencedor(jogando)
-                        
-                    #diagonais
-                    if tabela[0][0] == tabela[1][1] == tabela[2][2]!="":
-                        vencedor(jogando)
-                    elif tabela[0][2] == tabela[1][1] == tabela[2][0]!="":
-                        vencedor(jogando)
-        
-                    #empate
-                    if contador>=9:
-                        vencedor('foi empate')
         
         if i==str(5):
             #verificando se a posição esta vazia ou nao
@@ -308,44 +209,19 @@ def iniciar_jogo():
                 #definindo a cor do  texto do  botao e marcar a posição da tabela com o valor do jogador atual
                 b_4['fg'] = cor
                 b_4['text'] = jogando
-                tabela[[0][0]] = jogando
+                tabela[1][1] = jogando
+            
                 
                 #verificando quem vai estar jogando para trocar para o proximo jogar
                 if jogando == 'X':
-                    jogando = '0'
+                    jogando = 'O'
                     joga ='Jogador 1'
                 else:
                     jogando = 'X'
                     joga ='Jogador 2'
                 #Incrementando o contador para a próxima rodada
                 contador+=1
-                #Quando o contador for maior ou igual a 5, verifica se houve algum vencedor, de acordo com os seguites padroes dentro da tabela
                 
-                if contador>=5:
-                    #linhas 
-                    if tabela[0][0] == tabela[0][1] == tabela[0][2]!="":
-                        vencedor(jogando)
-                    elif tabela[1][0] == tabela[1][1] == tabela[1][2]!="":
-                        vencedor(jogando)
-                    elif tabela[2][0] == tabela[2][1] == tabela[2][2]!="":
-                        vencedor(jogando)
-                    #Colunas
-                    if tabela[0][0] == tabela[1][0] == tabela[2][0]!="":
-                        vencedor(jogando)
-                    elif tabela[0][1] == tabela[1][1] == tabela[2][1]!="":
-                        vencedor(jogando)
-                    elif tabela[0][2] == tabela[1][2] == tabela[2][2]!="":
-                        vencedor(jogando)
-                        
-                    #diagonais
-                    if tabela[0][0] == tabela[1][1] == tabela[2][2]!="":
-                        vencedor(jogando)
-                    elif tabela[0][2] == tabela[1][1] == tabela[2][0]!="":
-                        vencedor(jogando)
-        
-                    #empate
-                    if contador>=9:
-                        vencedor('foi empate')
         
         if i==str(6):
             #verificando se a posição esta vazia ou nao
@@ -359,44 +235,19 @@ def iniciar_jogo():
                 #definindo a cor do  texto do  botao e marcar a posição da tabela com o valor do jogador atual
                 b_5['fg'] = cor
                 b_5['text'] = jogando
-                tabela[[0][0]] = jogando
+                tabela[1][2] = jogando
+            
                 
                 #verificando quem vai estar jogando para trocar para o proximo jogar
                 if jogando == 'X':
-                    jogando = '0'
+                    jogando = 'O'
                     joga ='Jogador 1'
                 else:
                     jogando = 'X'
                     joga ='Jogador 2'
                 #Incrementando o contador para a próxima rodada
                 contador+=1
-                #Quando o contador for maior ou igual a 5, verifica se houve algum vencedor, de acordo com os seguites padroes dentro da tabela
                 
-                if contador>=5:
-                    #linhas 
-                    if tabela[0][0] == tabela[0][1] == tabela[0][2]!="":
-                        vencedor(jogando)
-                    elif tabela[1][0] == tabela[1][1] == tabela[1][2]!="":
-                        vencedor(jogando)
-                    elif tabela[2][0] == tabela[2][1] == tabela[2][2]!="":
-                        vencedor(jogando)
-                    #Colunas
-                    if tabela[0][0] == tabela[1][0] == tabela[2][0]!="":
-                        vencedor(jogando)
-                    elif tabela[0][1] == tabela[1][1] == tabela[2][1]!="":
-                        vencedor(jogando)
-                    elif tabela[0][2] == tabela[1][2] == tabela[2][2]!="":
-                        vencedor(jogando)
-                        
-                    #diagonais
-                    if tabela[0][0] == tabela[1][1] == tabela[2][2]!="":
-                        vencedor(jogando)
-                    elif tabela[0][2] == tabela[1][1] == tabela[2][0]!="":
-                        vencedor(jogando)
-        
-                    #empate
-                    if contador>=9:
-                        vencedor('foi empate')
         
         if i==str(7):
             #verificando se a posição esta vazia ou nao
@@ -410,44 +261,19 @@ def iniciar_jogo():
                 #definindo a cor do  texto do  botao e marcar a posição da tabela com o valor do jogador atual
                 b_6['fg'] = cor
                 b_6['text'] = jogando
-                tabela[[0][0]] = jogando
+                tabela[2][0] = jogando
+            
                 
                 #verificando quem vai estar jogando para trocar para o proximo jogar
                 if jogando == 'X':
-                    jogando = '0'
+                    jogando = 'O'
                     joga ='Jogador 1'
                 else:
                     jogando = 'X'
                     joga ='Jogador 2'
                 #Incrementando o contador para a próxima rodada
                 contador+=1
-                #Quando o contador for maior ou igual a 5, verifica se houve algum vencedor, de acordo com os seguites padroes dentro da tabela
                 
-                if contador>=5:
-                    #linhas 
-                    if tabela[0][0] == tabela[0][1] == tabela[0][2]!="":
-                        vencedor(jogando)
-                    elif tabela[1][0] == tabela[1][1] == tabela[1][2]!="":
-                        vencedor(jogando)
-                    elif tabela[2][0] == tabela[2][1] == tabela[2][2]!="":
-                        vencedor(jogando)
-                    #Colunas
-                    if tabela[0][0] == tabela[1][0] == tabela[2][0]!="":
-                        vencedor(jogando)
-                    elif tabela[0][1] == tabela[1][1] == tabela[2][1]!="":
-                        vencedor(jogando)
-                    elif tabela[0][2] == tabela[1][2] == tabela[2][2]!="":
-                        vencedor(jogando)
-                        
-                    #diagonais
-                    if tabela[0][0] == tabela[1][1] == tabela[2][2]!="":
-                        vencedor(jogando)
-                    elif tabela[0][2] == tabela[1][1] == tabela[2][0]!="":
-                        vencedor(jogando)
-        
-                    #empate
-                    if contador>=9:
-                        vencedor('foi empate')
         
         if i==str(8):
             #verificando se a posição esta vazia ou nao
@@ -461,44 +287,19 @@ def iniciar_jogo():
                 #definindo a cor do  texto do  botao e marcar a posição da tabela com o valor do jogador atual
                 b_7['fg'] = cor
                 b_7['text'] = jogando
-                tabela[[0][0]] = jogando
+                tabela[2][1] = jogando
+            
                 
                 #verificando quem vai estar jogando para trocar para o proximo jogar
                 if jogando == 'X':
-                    jogando = '0'
+                    jogando = 'O'
                     joga ='Jogador 1'
                 else:
                     jogando = 'X'
                     joga ='Jogador 2'
                 #Incrementando o contador para a próxima rodada
                 contador+=1
-                #Quando o contador for maior ou igual a 5, verifica se houve algum vencedor, de acordo com os seguites padroes dentro da tabela
                 
-                if contador>=5:
-                    #linhas 
-                    if tabela[0][0] == tabela[0][1] == tabela[0][2]!="":
-                        vencedor(jogando)
-                    elif tabela[1][0] == tabela[1][1] == tabela[1][2]!="":
-                        vencedor(jogando)
-                    elif tabela[2][0] == tabela[2][1] == tabela[2][2]!="":
-                        vencedor(jogando)
-                    #Colunas
-                    if tabela[0][0] == tabela[1][0] == tabela[2][0]!="":
-                        vencedor(jogando)
-                    elif tabela[0][1] == tabela[1][1] == tabela[2][1]!="":
-                        vencedor(jogando)
-                    elif tabela[0][2] == tabela[1][2] == tabela[2][2]!="":
-                        vencedor(jogando)
-                        
-                    #diagonais
-                    if tabela[0][0] == tabela[1][1] == tabela[2][2]!="":
-                        vencedor(jogando)
-                    elif tabela[0][2] == tabela[1][1] == tabela[2][0]!="":
-                        vencedor(jogando)
-        
-                    #empate
-                    if contador>=9:
-                        vencedor('foi empate')
         
         if i==str(9):
             
@@ -514,55 +315,168 @@ def iniciar_jogo():
                 #definindo a cor do  texto do  botao e marcar a posição da tabela com o valor do jogador atual
                 b_8['fg'] = cor
                 b_8['text'] = jogando
-                tabela[[0][0]] = jogando
+                tabela[2][2] = jogando
+            
                 
                 #verificando quem vai estar jogando para trocar para o proximo jogar
                 if jogando == 'X':
-                    jogando = '0'
+                    jogando = 'O'
                     joga ='Jogador 1'
                 else:
                     jogando = 'X'
                     joga ='Jogador 2'
                 #Incrementando o contador para a próxima rodada
                 contador+=1
-                #Quando o contador for maior ou igual a 5, verifica se houve algum vencedor, de acordo com os seguites padroes dentro da tabela
-                
-                if contador>=5:
-                    #linhas 
-                    if tabela[0][0] == tabela[0][1] == tabela[0][2]!="":
-                        vencedor(jogando)
-                    elif tabela[1][0] == tabela[1][1] == tabela[1][2]!="":
-                        vencedor(jogando)
-                    elif tabela[2][0] == tabela[2][1] == tabela[2][2]!="":
-                        vencedor(jogando)
-                    #Colunas
-                    if tabela[0][0] == tabela[1][0] == tabela[2][0]!="":
-                        vencedor(jogando)
-                    elif tabela[0][1] == tabela[1][1] == tabela[2][1]!="":
-                        vencedor(jogando)
-                    elif tabela[0][2] == tabela[1][2] == tabela[2][2]!="":
-                        vencedor(jogando)
-                        
-                    #diagonais
-                    if tabela[0][0] == tabela[1][1] == tabela[2][2]!="":
-                        vencedor(jogando)
-                    elif tabela[0][2] == tabela[1][1] == tabela[2][0]!="":
-                        vencedor(jogando)
+        #Quando o contador for maior ou igual a 5, verifica se houve algum vencedor, de acordo com os seguites padroes dentro da tabela
         
-                    #empate
-                    if contador>=9:
-                        vencedor('foi empate')       
-       
-        print(i)
+        if contador>=5:
+            #linhas 
+            if tabela[0][0] == tabela[0][1] == tabela[0][2]!="":
+                vencedor(jogando)
+            elif tabela[1][0] == tabela[1][1] == tabela[1][2]!="":
+                vencedor(jogando)
+            elif tabela[2][0] == tabela[2][1] == tabela[2][2]!="":
+                vencedor(jogando)
+            #Colunas
+            if tabela[0][0] == tabela[1][0] == tabela[2][0]!="":
+                vencedor(jogando)
+            elif tabela[0][1] == tabela[1][1] == tabela[2][1]!="":
+                vencedor(jogando)
+            elif tabela[0][2] == tabela[1][2] == tabela[2][2]!="":
+                vencedor(jogando)
+                
+            #diagonais
+            if tabela[0][0] == tabela[1][1] == tabela[2][2]!="":
+                vencedor(jogando)
+            elif tabela[0][2] == tabela[1][1] == tabela[2][0]!="":
+                vencedor(jogando)
+
+            #empate
+            if contador>=9:
+                vencedor('Foi empate')               
     
     #Decidir o vencedor
-    def vencedor():
-        pass
-    
+    def vencedor(i):
+        global tabela
+        global jogando
+        global pontuacao_1
+        global pontuacao_2
+        
+        
+        
+        
+        #bloqueando os botoes
+        b_0['state']='disable'
+        b_1['state']='disable'
+        b_2['state']='disable'
+        b_3['state']='disable'
+        b_4['state']='disable'
+        b_5['state']='disable'
+        b_6['state']='disable'
+        b_7['state']='disable'
+        b_8['state']='disable'
+        
+        app_vencedor =Label(frame_baixo, text='', width=17, relief='flat', anchor='center', font=('Ivy 13 bold'), bg=co1, fg=co2)  
+        app_vencedor.place(x=40, y=220)
+        
+        if i == 'X':
+            pontuacao_2+=1
+            app_vencedor['text'] = 'Jogador 2 venceu'   
+            app_o_pontos['text'] = pontuacao_2
+            
+        if i == 'O':
+            pontuacao_1+=1
+            app_vencedor['text'] = 'Jogador 1 venceu'   
+            app_x_pontos['text'] = pontuacao_1
+        if i == 'Foi empate':
+            app_vencedor['text'] = 'Empate'
+            
+        def start():
+            
+            #limpado os botoes caso ganhe
+            b_0['text']=''
+            b_1['text']=''
+            b_2['text']=''
+            b_3['text']=''
+            b_4['text']=''
+            b_5['text']=''
+            b_6['text']=''
+            b_7['text']=''
+            b_8['text']=''
+            
+            #bloqueando os botoes
+            b_0['state']='normal'
+            b_1['state']='normal'
+            b_2['state']='normal'
+            b_3['state']='normal'
+            b_4['state']='normal'
+            b_5['state']='normal'
+            b_6['state']='normal'
+            b_7['state']='normal'
+            b_8['state']='normal'
+            
+            #reiniciando a tabela
+            tabela = [['1', '2', '3'], ['4', '5', '5'], ['7', '8', '9']]
+            
+            app_vencedor.destroy()
+            b_jogar.destroy()
+        ##CHAMA A FUNÇÃO START
+        b_jogar =Button(frame_baixo, command=start, text='Proxima Rodada', font=('Ivy 10 bold'), overrelief=RIDGE, relief='raised', bg=fundo, fg=co0)  
+        b_jogar.place(x=70, y=197) #mover item dentro da janela
+        
+        def fim_de_jogo():
+            b_jogar.destroy()
+            app_vencedor.destroy()
+            
+            
+            terminar()
+
+            
+            
+   
     
     #Terminar o jogo atual
     def terminar():
-        pass
+        global tabela
+        global contador_de_rodada
+        global pontuacao_1
+        global pontuacao_2
+        global contador
+        
+        tabela = [['1', '2', '3'], ['4', '5', '5'], ['7', '8', '9']]
+        contador_de_rodada = 0
+        pontuacao_1 = 0 
+        pontuacao_2 = 0
+        
+        
+        #bloqueando os botoes
+        b_0['state']='disable'
+        b_1['state']='disable'
+        b_2['state']='disable'
+        b_3['state']='disable'
+        b_4['state']='disable'
+        b_5['state']='disable'
+        b_6['state']='disable'
+        b_7['state']='disable'
+        b_8['state']='disable'
+        
+        app_fim =Label(frame_baixo, text='Fim de Jogo', width=17, relief='flat', anchor='center', font=('Ivy 13 bold'), bg=co1, fg=co2)  
+        app_fim.place(x=25, y=90)
+        
+        #Jogar novamente
+        
+        def jogar_novamente():
+            app_o_pontos['text'] = '0'
+            app_x_pontos['text'] = '0'
+            app_fim.destroy()
+            b_jogar.destroy()
+            #iniciando o jogo novamente
+            iniciar_jogo()
+            #jogar novamente
+            b_jogar =Button(frame_baixo, command=jogar_novamente, text='Jogar', width=10, font=('Ivy 10 bold'), overrelief=RIDGE, relief='raised', bg=fundo, fg=co0)  
+            b_jogar.place(x=85, y=197) #mover item dentro da janela
+        
+        
     
     ##Configurando o frame baixo
 
@@ -620,7 +534,7 @@ def iniciar_jogo():
 ##BOTAO JOGAR
 
 b_jogar =Button(frame_baixo, command=iniciar_jogo, text='Jogar', width=10, font=('Ivy 10 bold'), overrelief=RIDGE, relief='raised', bg=fundo, fg=co0)  
-b_jogar.place(x=85, y=210) #mover item dentro da janela
+b_jogar.place(x=85, y=197) #mover item dentro da janela
 
 
 
